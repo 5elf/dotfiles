@@ -494,16 +494,14 @@ nmap  -  <Plug>(choosewin)
 "
 " w0rp/ale
 "
+let g:ale_linters_explicit = 1
 let g:ale_set_highlights = 0
 let g:ale_linters = {
-\   'python': ['flake8', 'pylint'],
+\   'python': ['flake8', 'pyright'],
 \}
-let g:ale_python_pylint_use_global = 0
-let g:ale_python_pylint_executable = '/usr/bin/env pylint'
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_python_pylint_options = '--disable=C0111'
 nmap <silent><C-k> <Plug>(ale_previous_wrap)
 nmap <silent><C-j> <Plug>(ale_next_wrap)
 
